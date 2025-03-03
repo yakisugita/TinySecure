@@ -1,0 +1,17 @@
+name: Run ansible-playbook
+on:
+  push:
+      branches:
+        - master
+  workflow_dispatch:
+jobs:
+  human-count-actions:
+    runs-on: [self-hosted]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run playbook
+        run: |
+          echo ${ANSIBLE_VAULT_PASS} | ansible-playbook -i hosts pull-TinySecure.yml --vault-password-file=/bin/cat
+        working-directory: /home/ctrl/playbooks
+        env:
+          ANSIBLE_VAULT_PASS: ${{ secrets.VAULT_PASS }}
