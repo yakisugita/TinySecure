@@ -1,9 +1,11 @@
 <?php
 declare(strict_types=1);
 
-// namespace TinySecure\Controller\Admin;
+namespace TinySecure\Controller\Admin;
 
-class TinySecureController extends \BaserCore\Controller\Admin\BcAdminAppController
+use BaserCore\Controller\Admin\BcAdminAppController;
+
+class TinySecureController extends BcAdminAppController
 {
     public function index()
     {
