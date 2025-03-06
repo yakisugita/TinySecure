@@ -12,7 +12,7 @@ class TinySecureTable extends Table
         parent::initialize($config);
 
         // このモデルが操作するテーブル名を 'sample_configs' に設定
-        $this->setTable('tinysecure_configs');
+        $this->setTable('tiny_secure');
 
         // プライマリキー（主キー）を 'id' に設定
         $this->setPrimaryKey('id');
