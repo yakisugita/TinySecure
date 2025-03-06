@@ -5,7 +5,7 @@ namespace TinySecure\Controller\Admin;
 
 use BaserCore\Controller\Admin\BcAdminAppController;
 
-class TinySecureController extends BcAdminAppController
+class TinySecureAdminController extends BcAdminAppController
 {
     public function index()
     {
