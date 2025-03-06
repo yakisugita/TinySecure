@@ -13,7 +13,7 @@ class TinySecureController extends BcAdminAppController
         parent::initialize();
 
         // SampleConfigs モデルをロード（DBとのやり取りに使用）
-        $this->loadModel('TinySecure.TinySecure');
+        $this->loadComponent('TinySecure.TinySecure');
 
         // 管理画面のレイアウトを設定
         $this->viewBuilder()->setLayout('admin');

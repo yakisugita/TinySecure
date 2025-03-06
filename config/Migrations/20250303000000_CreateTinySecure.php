@@ -8,7 +8,7 @@ class CreateTinySecure extends AbstractMigration
     public function change(): void
     {
         // sample_configs テーブルを作成
-        $table = $this->table('tinysecure');
+        $table = $this->table('tiny_secure');
 
         // 'name' カラム: 設定のキー（例: site_title など）
         $table->addColumn('name', 'string', ['limit' => 255, 'null' => false]);
