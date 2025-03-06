@@ -1,4 +1,5 @@
 <?= $this->BcAdmin->title('設定一覧') ?>
+
 <table class="list-table">
     <thead>
         <tr>
@@ -11,10 +12,10 @@
     <tbody>
         <?php foreach ($configs as $config): ?>
         <tr>
-            <td><?= h($config->id) ?></td>
-            <td><?= h($config->name) ?></td>
-            <td><?= h($config->value) ?></td>
-            <td><?= $this->Html->link('編集', ['action' => 'edit', $config->id]) ?></td>
+            <td><?= h($config->id) ?></td> <!-- IDを表示 -->
+            <td><?= h($config->name) ?></td> <!-- 設定のキーを表示 -->
+            <td><?= h($config->value) ?></td> <!-- 設定の値を表示 -->
+            <td><?= $this->Html->link('編集', ['action' => 'edit', $config->id]) ?></td> <!-- 編集ページへのリンク -->
         </tr>
         <?php endforeach; ?>
     </tbody>
