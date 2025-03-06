@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace TinySecure\Controller\Admin;
 
-use BaserCore\Controller\BcAdminAppController;
+use BaserCore\Controller\Admin\BcAdminAppController;
 use Cake\Event\EventInterface;
 
 class TinySecureController extends BcAdminAppController
