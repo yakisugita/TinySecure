@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace SampleConfig;
+namespace TinySecure;
 
 use BaserCore\BcPlugin;
 
-class SampleConfigPlugin extends BcPlugin
+class TinySecurePlugin extends BcPlugin
 {
     public function initialize(): void
     {

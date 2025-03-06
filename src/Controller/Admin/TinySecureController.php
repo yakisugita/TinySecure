@@ -6,14 +6,14 @@ namespace TinySecure\Controller\Admin;
 use BaserCore\Controller\BcAdminAppController;
 use Cake\Event\EventInterface;
 
-class TinySecureConfigsController extends BcAdminAppController
+class TinySecureController extends BcAdminAppController
 {
     public function initialize(): void
     {
         parent::initialize();
 
         // SampleConfigs モデルをロード（DBとのやり取りに使用）
-        $this->loadModel('TinySecure.TinySecureConfigs');
+        $this->loadModel('TinySecure.TinySecure');
 
         // 管理画面のレイアウトを設定
         $this->viewBuilder()->setLayout('admin');
@@ -37,15 +37,15 @@ class TinySecureConfigsController extends BcAdminAppController
     public function edit($id = null)
     {
         // 指定されたIDの設定を取得
-        $config = $this->TinySecureConfigs->get($id);
+        $config = $this->TinySecure->get($id);
 
         // フォームが送信された場合
         if ($this->request->is(['post', 'put'])) {
             // 送信されたデータをエンティティに適用
-            $config = $this->TinySecureConfigs->patchEntity($config, $this->request->getData());
+            $config = $this->TinySecure->patchEntity($config, $this->request->getData());
 
             // データを保存
-            if ($this->TinySecureConfigs->save($config)) {
+            if ($this->TinySecure->save($config)) {
                 $this->Flash->success('設定を保存しました。');
                 return $this->redirect(['action' => 'index']);
             }
