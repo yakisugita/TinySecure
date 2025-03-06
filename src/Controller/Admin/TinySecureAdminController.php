@@ -11,4 +11,9 @@ class TinySecureAdminController extends BcAdminAppController
     {
         // 
     }
+
+    public function edit()
+    {
+        //
+    }
 }
